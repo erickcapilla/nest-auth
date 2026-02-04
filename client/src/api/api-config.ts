@@ -19,7 +19,9 @@ export const apiFetch = async (endpoint: string, options: RequestInit = {}) => {
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
     const error = new Error(errorData.message || "An error occurred while fetching data.");
-    toast.error(error.message);
+    if (errorData.message !== "Unauthorized") {
+      toast.error(error.message);
+    }
     throw error;
   }
 

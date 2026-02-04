@@ -4,7 +4,7 @@ Sistema de autenticación fullstack con validación de seguridad, gestión de se
 
 ## Stack Técnico
 - **Backend:** NestJS, MongoDB (Mongoose), Passport JWT, Cookies.
-- **Frontend:** React (Vite), Context API, Zod, Native Fetch.
+- **Frontend:** React (Vite), Context API, Zod, React router.
 
 ## Funcionalidades Clave
 - **Seguridad:** JWT almacenado en **Cookies HttpOnly** (Protección contra XSS).
@@ -14,6 +14,10 @@ Sistema de autenticación fullstack con validación de seguridad, gestión de se
 - **Validación:** Esquemas de datos con Zod en el cliente y Class-validator en el servidor.
 
 ## Instalación Rápida
+
+### Requisitos
+- Node.js v18+
+- MongoDB instalado o una URI de MongoDB Atlas
 
 Descargar e ingresar al repositorio
 
@@ -34,14 +38,14 @@ cp .env.template .env
 npm run start:dev
 ```
 
-### 2. Backend
+### 2. Frontend
 ```bash
 cd client
 npm install
 # Configurar .env (VITE_API_URL)
 cp .env.template .env
 
-npm 
+npm run dev
 ```
 
 ## API Endpoints
@@ -50,3 +54,7 @@ npm
 - `POST /api/auth/login` - Login + Captura de ubicación + Set-Cookie.
 - `GET /api/auth/profile` - Validación de sesión y obtención de perfil.
 - `POST /api/auth/logout` - Invalida sesión en BD y elimina Cookie.
+
+## Documentación
+
+Documentación más detallada [aqui](/docs/documentacion.pdf)
