@@ -15,12 +15,22 @@ Sistema de autenticación fullstack con validación de seguridad, gestión de se
 
 ## Instalación Rápida
 
+Descargar e ingresar al repositorio
+
+```bash
+git clone https://github.com/erickcapilla/nest-auth.git
+
+cd nest-auth
+```
+
 
 ### 1. Backend
 ```bash
 cd server
 npm install
 # Configurar .env (MONGO_URI, JWT_SECRET)
+cp .env.template .env
+
 npm run start:dev
 ```
 
@@ -29,12 +39,14 @@ npm run start:dev
 cd client
 npm install
 # Configurar .env (VITE_API_URL)
+cp .env.template .env
+
 npm 
 ```
 
 ## API Endpoints
 
-- `POST /auth/signup` - Registro de usuario.
-- `POST /auth/login` - Login + Captura de ubicación + Set-Cookie.
-- `GET /auth/profile` - Validación de sesión y obtención de perfil.
-- `POST /auth/logout` - Invalida sesión en BD y elimina Cookie.
+- `POST /api/auth/signup` - Registro de usuario.
+- `POST /api/auth/login` - Login + Captura de ubicación + Set-Cookie.
+- `GET /api/auth/profile` - Validación de sesión y obtención de perfil.
+- `POST /api/auth/logout` - Invalida sesión en BD y elimina Cookie.
