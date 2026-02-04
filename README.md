@@ -28,7 +28,7 @@ cd nest-auth
 ```
 
 
-### 1. Backend
+### Backend
 ```bash
 cd server
 npm install
@@ -38,7 +38,7 @@ cp .env.template .env
 npm run start:dev
 ```
 
-### 2. Frontend
+### Frontend
 ```bash
 cd client
 npm install
@@ -57,4 +57,4 @@ npm run dev
 
 ## Documentación
 
-Documentación más detallada [aqui](/docs/documentacion.pdf)
+Documentación más detallada [aqui](/docs/documentacion.pdf) (archivo que se encuentra en `docs/documentacion.pdf`)
